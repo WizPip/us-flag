@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Phillip Parr">
+	<meta name="description" content="Clickable / tabable fully accessible flag of the United States with state information">
+	<meta name="theme-color" content="#ffffff">
+	<title>Flag of the United States</title>
+	<style>
+		html, body {
+			width:100%;
+			height:100%;
+		}
+		body {
+			font-size:62.5%;
+			font-family:Verdana, Geneva, Tahoma, sans-serif;
+			margin:0;
+			overflow-y: scroll;
+		}
+		#flag h1, #flag h2, #flag a {
+			position: absolute;
+			padding: 0;
+			overflow: hidden;
+			clip: rect(0,0,0,0);
+		}
+		#flag ul {
+			padding:0;
+			margin:0;
+		}
+		#flag li {
+			list-style:none;
+			font-size:calc(100vw/(8/3)/6/1.5);
+		}
+		#flag ul:nth-of-type(1) {
+			background:#0052A5;
+			width:calc(100vw/(8/3) + 1px); /* + 1px to fix IE / Edge calc imprecision */
+			height:calc(100vw/2/(13/7));
+			position:absolute;
+			top:0;
+			z-index:2;
+		}
+		#flag ul:nth-of-type(1) li {
+			float:left;
+			width:calc(100vw/(8/3)/6);
+			height:calc(100vw/2/(13/7)/9);
+			line-height:1em;
+			margin:0.1em 0 -0.18em 0;
+			position:relative;
+		}
+		#flag ul:nth-of-type(1) li::after {
+			content:"★";
+			display:inline-block;
+			color:#fff;
+			position:absolute;
+			top:0;
+			left:50%;
+			transform:translate(-50%, 0);
+		}
+		#flag ul:nth-of-type(1) li:nth-child(11n+7) {
+			margin-left:calc(100vw/(8/3)/6/2);
+		}
+		#flag ul:nth-of-type(2) {
+			position:absolute;
+			top:0;
+			left:0;
+			width:100vw;
+			max-width:100%;
+			height:calc(100vw/2);
+			z-index:1;
+		}
+		#flag ul:nth-of-type(2) li {
+			height:calc(100vw/2/13);
+			text-align:right;
+		}
+		#flag ul:nth-of-type(2) li:nth-child(odd) {
+			background:#E0162B;
+		}
+
+		#flag a:focus, #flag li:hover a {
+			width: auto;
+			height: auto;
+			margin: 0;
+			top:1em;
+			left:1.5em;
+			padding:1em;
+			clip:auto;
+			background:#fff;
+			border:1px solid #000;
+			z-index:2;
+			font-size:calc(100vw/(8/3)/6/3);
+		}
+		#flag ul:nth-of-type(2) a {
+			right:0;
+		}
+		#flag ul:nth-of-type(2) a:focus, #flag ul:nth-of-type(2) li:hover a {
+			top:auto;
+			left:auto;
+		}
+
+		#state-info {
+			position:relative;
+			top:calc(100vw/2);
+			font-size:1.4em;
+			margin-top:4em;
+			outline: none; /* stops the box when we focus this for screenreader */
+		}
+		#state-info table:first-of-type {
+			width:100%;
+		}
+	</style>
+</head>
+<body>
+	<section id="flag">
+		<h1>Flag of the United States</h1>
+		<h2>States of the union</h2>
+		<ul>
+			<li><a href="#Alabama">Alabama</a></li>
+			<li><a href="#Alaska">Alaska</a></li>
+			<li><a href="#Arizona">Arizona</a></li>
+			<li><a href="#Arkansas">Arkansas</a></li>
+			<li><a href="#California">California</a></li>
+			<li><a href="#Colorado">Colorado</a></li>
+			<li><a href="#Connecticut">Connecticut</a></li>
+			<li><a href="#Delaware">Delaware</a></li>
+			<li><a href="#Florida">Florida</a></li>
+			<li><a href="#Georgia">Georgia</a></li>
+			<li><a href="#Hawaii">Hawaii</a></li>
+			<li><a href="#Idaho">Idaho</a></li>
+			<li><a href="#Illinois">Illinois</a></li>
+			<li><a href="#Indiana">Indiana</a></li>
+			<li><a href="#Iowa">Iowa</a></li>
+			<li><a href="#Kansas">Kansas</a></li>
+			<li><a href="#Kentucky">Kentucky</a></li>
+			<li><a href="#Louisiana">Louisiana</a></li>
+			<li><a href="#Maine">Maine</a></li>
+			<li><a href="#Maryland">Maryland</a></li>
+			<li><a href="#Massachusetts">Massachusetts</a></li>
+			<li><a href="#Michigan">Michigan</a></li>
+			<li><a href="#Minnesota">Minnesota</a></li>
+			<li><a href="#Mississippi">Mississippi</a></li>
+			<li><a href="#Missouri">Missouri</a></li>
+			<li><a href="#Montana">Montana</a></li>
+			<li><a href="#Nebraska">Nebraska</a></li>
+			<li><a href="#Nevada">Nevada</a></li>
+			<li><a href="#New_Hampshire">New Hampshire</a></li>
+			<li><a href="#New_Jersey">New Jersey</a></li>
+			<li><a href="#New_Mexico">New Mexico</a></li>
+			<li><a href="#New_York">New York</a></li>
+			<li><a href="#North_Carolina">North Carolina</a></li>
+			<li><a href="#North_Dakota">North Dakota</a></li>
+			<li><a href="#Ohio">Ohio</a></li>
+			<li><a href="#Oklahoma">Oklahoma</a></li>
+			<li><a href="#Oregon">Oregon</a></li>
+			<li><a href="#Pennsylvania">Pennsylvania</a></li>
+			<li><a href="#Rhode_Island">Rhode Island</a></li>
+			<li><a href="#South_Carolina">South Carolina</a></li>
+			<li><a href="#South_Dakota">South Dakota</a></li>
+			<li><a href="#Tennessee">Tennessee</a></li>
+			<li><a href="#Texas">Texas</a></li>
+			<li><a href="#Utah">Utah</a></li>
+			<li><a href="#Vermont">Vermont</a></li>
+			<li><a href="#Virginia">Virginia</a></li>
+			<li><a href="#Washington">Washington</a></li>
+			<li><a href="#West_Virginia">West Virginia</a></li>
+			<li><a href="#Wisconsin">Wisconsin</a></li>
+			<li><a href="#Wyoming">Wyoming</a></li>
+		</ul>
+		<h2>Colonies</h2>
+		<ul>
+			<li><a href="#Province_of_New_Hampshire">Province of New Hampshire</a></li>
+			<li><a href="#Province_of_Massachusetts_Bay">Province of Massachusetts Bay</a></li>
+			<li><a href="#Colony_of_Rhode_Island_and_Providence_Plantations">Colony of Rhode Island and Providence Plantations</a></li>
+			<li><a href="#Connecticut_Colony">Connecticut Colony</a></li>
+			<li><a href="#Province_of_New_York">Province of New York</a></li>
+			<li><a href="#Province_of_New_Jersey">Province of New Jersey</a></li>
+			<li><a href="#Province_of_Pennsylvania">Province of Pennsylvania</a></li>
+			<li><a href="#Delaware_Colony">Delaware Colony</a></li>
+			<li><a href="#Province_of_Maryland">Province of Maryland</a></li>
+			<li><a href="#Colony_of_Virginia">Colony of Virginia</a></li>
+			<li><a href="#Province_of_North_Carolina">Province of North Carolina</a></li>
+			<li><a href="#Province_of_South_Carolina">Province of South Carolina</a></li>
+			<li><a href="#Province_of_Georgia">Province of Georgia</a></li>
+		</ul>
+	</section>
+	<script>
+	document.addEventListener("DOMContentLoaded", function(event) { // don't start till the DOM's ready
+		
+		"use strict";
+
+		// make a document to hold wiki page (prevents loading assets we don't need)
+		var stateDoc = document.implementation.createHTMLDocument('State Info'); /* title is required in IE / Edge */
+
+		// make section for the state info
+		var stateInfo = document.createElement("section");
+		stateInfo.id = 'state-info';
+		document.body.appendChild(stateInfo);
+
+		// if we're already on a state, load it
+		if(location.hash) {
+			loadState(location.hash);
+		}
+
+		// Listen for clicks on the flag
+		document.getElementById("flag").addEventListener("click", clickState);
+
+		// make sure back button works
+		window.addEventListener("hashchange", function() { loadState(location.hash); }, false);
+
+		// if that click's on a link, let's load the relevant page
+		function clickState(e) {
+			if(e.target.nodeName === 'A') {
+				loadState(e.target.hash);
+			}
+		}
+
+		// AJAX magic
+		function loadState(usState) {
+			if(!usState) return;
+			var xhr = new XMLHttpRequest();
+			// To load straight from Wiki we'd need this setup on a server
+			//xhr.open("GET", "state.php?" + Date.now(), true); // cross-origin & cache busting
+			//xhr.setRequestHeader('us-state', usState); // send required state as a special header
+			
+			// load saved local copy of wiki page
+			xhr.open("GET", 'states/' + usState.substring(1) + ".html", true);
+			xhr.onload = function () {
+				if(xhr.readyState === 4 && xhr.status === 200) {
+					stateDoc.body.innerHTML = xhr.responseText; // load result into new document
+					stateInfo.innerHTML = stateDoc.body.querySelector(".infobox.geography").outerHTML; // only want this table
+					stateInfo.setAttribute('tabindex',-1); // make it app tabable so screenreader moves here
+					stateInfo.focus(); // keyboard / screenreader focus
+					stateInfo.scrollIntoView(); // visual focus
+				}
+			};
+			xhr.onerror = function (e) {
+				console.error(xhr.statusText);
+			};
+			xhr.send(null);
+		}
+	});
+	</script>
+</body>
+</html>
